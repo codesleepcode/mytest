@@ -4,15 +4,15 @@ files:
   - source: /
     destination: /home/ec2-user/exp-app
 hooks:
-  application_stop:
+  ApplicationStop:
     - location: scripts/application_stop.sh
       timeout: 300
       runas: ec2-user
-  before_install:
+   BeforeInstall:
     - location: scripts/before_install.sh
       timeout: 300
       runas: ec2-user
-  application_start:
+  ApplicationStart:
     - location: scripts/application_start.sh
       timeout: 300
       runas: ec2-user
