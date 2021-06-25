@@ -7,12 +7,12 @@ hooks:
   application_stop:
     - location: scripts/application_stop.sh
       timeout: 300
-      run-as: ec2-user
+      runas: ec2-user
   before_install:
     - location: scripts/before_install.sh
       timeout: 300
-      run-as: ec2-user
+      runas: ec2-user
   application_start:
     - location: scripts/application_start.sh
       timeout: 300
-      run-as: ec2-user
+      runas: ec2-user
